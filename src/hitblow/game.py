@@ -8,8 +8,10 @@
 
 from .core import judge, make_secret
 
+def play():
+    from .keta import select_digits
 
-def play(digits=3):
+    digits = select_digits()
     secret = make_secret(digits)
     print(f"Hit & Blow（{digits} 桁・重複なし）")
 
